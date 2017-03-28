@@ -9,8 +9,7 @@ class Binary:
         return '0b' + self.number
 
     def __hex__(self):
-        print('coucou')
-        return '0x' + str(int(self.number, base=2))
+        return hex(self.__index__())
 
     def __int__(self):
         return int(self.number, base=2)
