@@ -30,7 +30,13 @@ class Binary:
         return Binary(str(int(bin1) & int(bin2)))
 
     def __add__(self, other):
-        return Binary('0')
+        return Binary(bin(int(self) + int(other))[2:])
+
+    def __mul__(self, other):
+        return Binary(bin(int(self) * int(other))[2:])
+
+    def __sub__(self, other):
+        return Binary(bin(int(self) - int(other))[2:])
 
 class SizeBinary:
     def __init__(self, number, size):
@@ -44,3 +50,4 @@ if __name__ == "__main__":
 	print(bin(b))
 	print(b[9])
 	print(Binary.fun_xor(Binary('101'), Binary('001')))
+	print(Binary('10')+Binary('11'))
