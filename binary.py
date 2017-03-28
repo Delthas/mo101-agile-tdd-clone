@@ -21,13 +21,13 @@ class Binary:
         return self.number[key]
 
     def fun_xor(bin1, bin2):
-        return Binary(str(int(bin1) ^ int(bin2))) #ca marche!
+        return Binary(str(int(bin1) ^ int(bin2)))
 
     def fun_or(bin1, bin2):
-        return Binary(str(int(bin1) | int(bin2))) #ca marche!
+        return Binary(str(int(bin1) | int(bin2)))
         
     def fun_and(bin1, bin2):
-        return Binary(str(int(bin1) & int(bin2))) #ca marche!
+        return Binary(str(int(bin1) & int(bin2)))
 
     def __add__(self, other):
         return Binary('0')
